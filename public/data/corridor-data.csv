@@ -1,0 +1,17 @@
+series,market,2023,2024,2025,unit,2025_status
+priority_corridors,Gulf focus,512,554,654,USD 100 million,mixed actual and provisional estimates
+priority_corridors,Europe to Asia public-data lower bound,197,207,233,USD 100 million,public-data lower bound
+macro_pool,Latin America and Caribbean inflows,1570,1656,1737,USD 100 million,IDB estimate
+macro_pool,United States outflows,983,1032,,USD 100 million,not yet published in WDI
+macro_pool,Sub-Saharan Africa inflows,522,572,560,USD 100 million,forecast
+trade_proxy,Singapore-EU,560,520,540,USD 100 million,partial two-way merchandise trade
+trade_proxy,Hong Kong-EU,650,630,630,USD 100 million,partial two-way merchandise trade
+trade_proxy,Hong Kong-Middle East,266,241,247,USD 100 million,partial two-way merchandise trade
+gulf_2025_mix,India,,,351,USD 100 million,FY2024-25 provisional proxy
+gulf_2025_mix,Pakistan,,,172,USD 100 million,actual
+gulf_2025_mix,Bangladesh,,,84,USD 100 million,actual
+gulf_2025_mix,Philippines,,,47,USD 100 million,estimate
+india_cost,Saudi Arabia to India - USD 200,,,5.59,percent,Q3 2025 price snapshot
+india_cost,Saudi Arabia to India - USD 500,,,3.07,percent,Q3 2025 price snapshot
+india_cost,UAE to India - USD 200,,,3.72,percent,Q3 2025 price snapshot
+india_cost,UAE to India - USD 500,,,2.19,percent,Q3 2025 price snapshot

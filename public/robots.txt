@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yyd106.github.io/payment-research/sitemap.xml
