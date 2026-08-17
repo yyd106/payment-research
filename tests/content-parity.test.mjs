@@ -22,6 +22,11 @@ test("keeps the bilingual report structure and sources aligned", () => {
   assert.equal(urls(zh).length, 57);
   assert.doesNotMatch(en, /[\u3400-\u9fff]/);
   assert.doesNotMatch(`${zh}\n${en}`, /internal market screening|内部市场筛选|Pre-publication logic|发送前逻辑/);
+  assert.match(zh, /三种口径不是按走廊划分的互斥类别/);
+  assert.match(en, /measures are not mutually exclusive corridor categories/);
+  assert.match(zh, /本报告如何使用/);
+  assert.match(en, /How this report uses it/);
+  assert.doesNotMatch(`${zh}\n${en}`, /本报告用于哪些走廊|Corridors covered in this report/);
 });
 
 test("preserves the report's material evidence statuses", () => {

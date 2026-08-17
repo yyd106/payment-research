@@ -30,13 +30,13 @@ Three principles apply throughout this report:
 
 ## 1. Three data measures used in this report
 
-No public database provides complete bilateral payment data across all countries, years, and customer types. This report therefore uses three measures. They answer different questions, must not be added together, and must not be subjected to a common market-penetration assumption.
+No public database provides complete bilateral payment data across all countries, years, and customer types. This report therefore uses three measures. The measures are not mutually exclusive corridor categories: in principle, the same corridor can be examined through all three, although comparable public data may not be available for every measure. This report selects one primary measure for each corridor group based on the question being asked and the available evidence. The measures answer different questions, must not be added together, and must not be subjected to a common market-penetration assumption.
 
-| Data measure | Question answered | Corridors covered in this report | Main limitation |
+| Data measure | Question answered | How this report uses it | Main limitation |
 |---|---|---|---|
-| Bilateral personal remittances | Approximately how much was remitted between two markets in a year? | Gulf to South Asia and the Philippines; Europe and Switzerland to Asia | Excludes business invoices, platform merchant settlements, and capital flows |
-| Regional remittance total | How large is the overall funding pool received by a region or sent by a major origin country? | Europe and the Gulf to Africa; global to Latin America; United States to global destinations | Cannot isolate the actual contribution of a specific sending region |
-| Two-way merchandise trade | Approximately how much cross-border business settlement activity exists? | Singapore and Hong Kong to Europe and the Gulf | Is not a one-way payment flow and does not equal the amount addressable by payment providers |
+| Bilateral personal remittances | Approximately how much was remitted between two markets in a year? | Used as the primary flow evidence for the Gulf to South Asia and the Philippines, and for Europe and Switzerland to Asia | Excludes business invoices, platform merchant settlements, and capital flows |
+| Regional remittance total | How large is the overall funding pool received by a region or sent by a major origin country? | Used when complete bilateral data are unavailable to describe the overall pools for Africa, Latin America, and US outflows | Cannot isolate the actual contribution of a specific sending region |
+| Two-way merchandise trade | Approximately how much cross-border business settlement activity exists? | Used only to indicate the scale of corporate settlement activity between Singapore and Hong Kong, and Europe and the Gulf | Is not a one-way payment flow and does not equal the amount addressable by payment providers |
 
 ### Confidence levels
 
