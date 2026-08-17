@@ -4,9 +4,9 @@ import { marked } from "marked";
 const sectionIds = [
   "executive-summary",
   "methodology",
-  "corridor-overview",
   "unmet-needs",
-  "market-priority",
+  "cpn-bfi-economics",
+  "corridor-overview",
   "gulf-to-south-asia",
   "europe-to-asia",
   "asia-to-europe-gulf",
@@ -88,7 +88,7 @@ function decorateHtml(rawHtml, lang) {
     })
     .replace(/<\/table>/g, "</table></div>")
     .replace(/<th>/g, '<th scope="col">')
-    .replace(/<a href="(https?:\/\/[^\"]+)"/g, '<a href="$1" rel="noreferrer"');
+    .replace(/<a href="(https?:\/\/[^"]+)"/g, '<a href="$1" rel="noreferrer"');
 
   return { html, toc, tableCount: tableIndex };
 }

@@ -1,17 +1,17 @@
-series,market,2023,2024,2025,unit,2025_status
-priority_corridors,Gulf focus,512,554,654,USD 100 million,mixed actual and provisional estimates
-priority_corridors,Europe to Asia public-data lower bound,197,207,233,USD 100 million,public-data lower bound
-macro_pool,Latin America and Caribbean inflows,1570,1656,1737,USD 100 million,IDB estimate
-macro_pool,United States outflows,983,1032,,USD 100 million,not yet published in WDI
-macro_pool,Sub-Saharan Africa inflows,522,572,560,USD 100 million,forecast
-trade_proxy,Singapore-EU,560,520,540,USD 100 million,partial two-way merchandise trade
-trade_proxy,Hong Kong-EU,650,630,630,USD 100 million,partial two-way merchandise trade
-trade_proxy,Hong Kong-Middle East,266,241,247,USD 100 million,partial two-way merchandise trade
-gulf_2025_mix,India,,,351,USD 100 million,FY2024-25 provisional proxy
-gulf_2025_mix,Pakistan,,,172,USD 100 million,actual
-gulf_2025_mix,Bangladesh,,,84,USD 100 million,actual
-gulf_2025_mix,Philippines,,,47,USD 100 million,estimate
-india_cost,Saudi Arabia to India - USD 200,,,5.59,percent,Q3 2025 price snapshot
-india_cost,Saudi Arabia to India - USD 500,,,3.07,percent,Q3 2025 price snapshot
-india_cost,UAE to India - USD 200,,,3.72,percent,Q3 2025 price snapshot
-india_cost,UAE to India - USD 500,,,2.19,percent,Q3 2025 price snapshot
+series,market,2023,2024,2025,unit,2025_status,evidence_boundary
+directional_flow_proxy,Gulf to India Pakistan Bangladesh and Philippines,50.6,54.8,64.7,USD billion,mixed actual provisional and estimated values,personal-remittance proxy not B2B volume
+directional_flow_proxy,Europe to Asia composite proxy,19.7,20.7,23.3,USD billion,composite proxy,not a lower bound or full market size
+macro_pool,Latin America and Caribbean remittance inflows,157.0,165.6,173.7,USD billion,IDB estimate,regional personal-remittance pool
+macro_pool,United States personal-remittance outflows,98.3,103.2,,USD billion,not yet published in WDI,macro measure not consumer-app volume
+macro_pool,Sub-Saharan Africa remittance inflows,52.2,57.2,56.0,USD billion,forecast,global-origin regional pool
+trade_proxy,Singapore-EU,56.0,52.0,54.0,USD billion,partial two-way merchandise trade,not one-way payment flow
+trade_proxy,Hong Kong-EU,65.0,63.0,63.0,USD billion,partial two-way merchandise trade,not one-way payment flow
+trade_proxy,Hong Kong-Middle East,26.6,24.1,24.7,USD billion,partial two-way merchandise trade,not one-way payment flow
+gulf_2025_mix,India,,,35.1,USD billion,FY2024-25 provisional proxy,source share held constant across three years
+gulf_2025_mix,Pakistan,,,17.2,USD billion,actual,fiscal year ending 2025
+gulf_2025_mix,Bangladesh,,,8.4,USD billion,actual,fiscal year ending 2025
+gulf_2025_mix,Philippines,,,4.0,USD billion,actual cash remittance,calendar year direct source-country data
+consumer_cost,Saudi Arabia to India sample average - USD 200,,,5.59,percent,Q3 2025 price snapshot,consumer price not BFI wholesale cost
+consumer_cost,UAE to India sample average - USD 200,,,3.72,percent,Q3 2025 price snapshot,consumer price not BFI wholesale cost
+consumer_cost,UAE to India Emirates NBD - USD 200,,,0.77,percent,Q3 2025 price snapshot,low-price sampled quote
+consumer_cost,UAE to India Remitly bank deposit - USD 200,,,1.04,percent,Q3 2025 price snapshot,low-price sampled quote

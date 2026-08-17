@@ -1,382 +1,293 @@
-# UR 跨境支付走廊流量与未满足需求研究（2023–2025）
+# UR 跨境支付走廊：流量信号、服务缺口假设与验证顺序（2023–2025）
 
-> 版本：2026-08-17（交叉验证修订）<br>
-> 研究对象：上一份可行性报告中的 6 组走廊<br>
+> 版本：2026-08-17（结构重写与 CPN/BFI 补充）<br>
+> 研究对象：六组跨境资金流及其对 UR 试点选择的意义<br>
 > 用途：市场研究与试点设计参考，不构成法律、监管或投资意见<br>
-> 金额单位：除特别说明外，全文均为亿美元。`654` 表示 654 亿美元，即 USD 65.4 billion
+> 金额单位：流量统一使用 USD billion（十亿美元）。`64.7` 表示 USD 64.7 billion，即 647 亿美元
 
-## 结论先行
+## 一、结论：公开数据只够形成两个试点假设
 
-六组走廊都不缺“能把一笔钱送到当地”的服务商。真正没有被充分满足的是一套稳定的企业服务：付款前能确认总成本、实收金额和到账时间；付款中只提交必要资料；付款后能对账；一家收款端金融机构不可用时，还有经过验证的替代路径。
+公开数据能够回答“哪里长期有跨境资金流”，但还不能证明“某类企业客户没有被服务”，更不能证明 UR 在那里可以赚钱。本报告因此不把六组走廊排成上线顺序，而是把证据收束为两个可以并行验证的付款假设。
 
-UR 不应按流量大小直接选市场。更有效的判断标准是三个条件能否同时成立：
-
-1. 流量足够支撑一项业务。
-2. 现有服务商已经提供覆盖，但仍没有提供稳定、透明、可对账的服务。
-3. UR 能用瑞士持牌能力、Circle Payments Network（CPN）和现有 Partner 补上缺口。
-
-按这个标准：
-
-- 首批验证海湾至印度和巴基斯坦。整个走廊组的个人汇款估算从 2023 年的 512 亿美元增至 2025 年的 654 亿美元。
-- 第二批验证欧洲或瑞士至印度和菲律宾。公开数据能证明的走廊下限从 197 亿美元增至 233 亿美元；越南和部分欧洲来源尚未计入。
-- 非洲的痛点最强，但收款端、外汇和合规风险也最高，只适合选 1–2 个国家试点。
-- 拉美和美国消费者汇款的市场更大，但现有品牌、牌照和本地网络竞争更强，不适合作为 UR 的起点。
-
-三条判断贯穿全文：
-
-- 流量只能说明资金池大小，不能直接推出 UR 能获得多少交易量。
-- 有服务商覆盖一个国家，不等于客户需要的付款组合已经能稳定使用。
-- CPN 扩大了可触达的收款端机构范围；UR 的产品价值，是把“可触达”变成“可承诺、可追踪、可切换、可对账”。
-
-## 一、阅读数字前，先分清三种口径
-
-公开市场没有一套同时覆盖所有国家、年份和客户类型的双边支付数据库。本报告因此使用三种口径。三种口径不是按走廊划分的互斥类别：理论上，同一条走廊可以同时用三种口径观察，但未必都能取得可比的公开数据。本报告根据要回答的问题和数据可得性，为每组走廊选择一种主要口径。三种口径回答的问题不同，不能相加，也不能套用同一个市场渗透率。
-
-| 数字口径 | 回答的问题 | 本报告如何使用 | 主要限制 |
+| 首批验证假设 | 公开数据已经说明什么 | 仍然缺少什么 | 当前决定 |
 |---|---|---|---|
-| 双边个人汇款 | 两个地区之间一年大约汇了多少钱 | 作为海湾至南亚和菲律宾、欧洲和瑞士至亚洲两组的主要流量依据 | 不包含企业货款、平台商户结算和资本流动 |
-| 地区汇款总额 | 一个收款地区或主要汇出国的总体资金池有多大 | 在缺乏完整双边数据时，用于描述非洲、拉美以及美国汇出市场的总体资金池 | 不能拆出某个发送地区实际贡献多少 |
-| 双向货物贸易额 | 企业跨境结算活动大约有多大 | 仅用于观察新加坡、香港与欧洲和海湾之间的企业结算活动量级 | 不是单向付款额，也不等于支付服务商可处理的金额 |
+| UAE 机构资金付至印度企业银行账户 | 海湾至印度存在长期、明显偏向印度的个人汇款流；印度已有公开的 Circle Payments Network（CPN）本币付款路径 | 真实企业客户流量、UR 账户中的企业对企业（B2B）路径、第二条独立付款路径、全包成本和成功率 | 进入生产验证，不据此上线 |
+| 瑞士或欧洲机构资金付至印度或菲律宾 | 公开数据拼接出的个人汇款规模代理约为 USD 23.3bn；UR 的瑞士客户关系和 CHF/EUR 资金入口与该方向更接近 | 企业或平台的真实付款日志、具体收款人类型和用途、UR 账户中的付款路径、客户愿意支付的价格 | 与海湾假设并行验证 |
 
-### 可信度如何判断
+其他四组市场目前只能得出更弱的决定：非洲先缩小到具体国家和收款方式；新加坡、香港至欧洲和海湾必须先取得现有 Partner 的付款日志；拉美只跟随已经出现的客户流量；美国消费者业务继续暂缓。
 
-- 高：使用同一官方序列的年度实际值。
-- 中：用官方总量乘以官方来源占比，或把多个官方序列拼成可验证的下限。
-- 低：用贸易额代理支付需求，或者 2025 年只能使用官方预测。
+UR 的机会也不是“使用稳定币”或“覆盖很多国家”。真正可能形成产品价值的是：在一个具体付款组合上，UR 能持续给出可接受的价格，完成合规审查和当地入账，并在主付款路径不可用时切换到经过验证的独立路径。
 
-### 本文使用的缩写
+## 二、三种数字分别回答什么
 
-- SP：Service Provider，即服务商。
-- BFI：Beneficiary Financial Institution，即收款端金融机构。它负责把结算资产换成当地法币，并付给最终收款人。
-- RFI：Request for Information，即补充资料请求。
-- CPN：Circle Payments Network。它让汇出端机构向多个 BFI 请求报价，并用稳定币完成机构间结算。
-- B2B、B2P、P2P：分别指企业付企业、企业付个人、个人付个人。
-- FY：Fiscal Year，即财政年度。WDI：World Development Indicators，即世界银行发展指标数据库。
+公开市场没有一套同时覆盖所有国家、年份和客户类型的双边支付数据库。本报告只能使用三种不同证据。它们可以观察同一地区，但统计对象不同，不能相加，也不能使用同一个市场渗透率。
 
-## 二、六组走廊的流量概览
+| 数字口径 | 实际统计的对象 | 它回答的问题 | 可以支持的判断 | 不能支持的判断 |
+|---|---|---|---|---|
+| 双边个人汇款 | 某个来源地的个人汇款流入某个收款市场 | 特定方向上的家庭汇款大约有多大 | 判断币种方向、个人收款基础设施和消费者价格基准 | 企业工资、供应商付款、平台结算的需求量或 UR 收入 |
+| 地区汇款总额 | 一个地区从全球收到的个人汇款，或一个国家向全球汇出的个人汇款宏观口径 | 整个收款地区或汇出国的个人资金池有多大 | 选择值得继续拆分的地区 | 某个来源地贡献多少、某条双边走廊有多大、企业付款有多大 |
+| 双向货物贸易额 | 两个地区之间两个方向的货物进出口总额 | 企业跨境结算活动大约处于什么数量级 | 判断是否值得取得企业付款日志继续研究 | 单向付款额、服务商可处理金额、UR 可获取市场份额 |
 
-金额单位：亿美元。
+例如，拉美和加勒比 2025 年约 USD 173.7bn 的地区汇款总额，回答的是“全球向拉美家庭汇入了多少个人汇款”。它不回答“欧洲或海湾向拉美汇了多少”，也不包含商户结算和供应商付款。
 
-| 走廊组 | 2023 | 2024 | 2025 | 这些数字代表什么 | 可信度 |
-|---|---:|---:|---:|---|---|
-| UAE、沙特至印度、巴基斯坦、孟加拉、菲律宾 | 512 | 554 | 654 | 双边个人汇款估算；印度按对应财政年度结束年份 | 中 |
-| 欧洲、瑞士至印度、菲律宾、印尼、越南 | 至少 197 | 至少 207 | 至少 233 | 已公开来源数据构成的个人汇款下限；印度按对应财政年度结束年份，未计越南和部分欧洲来源 | 中 |
-| 新加坡、香港至欧洲、瑞士、海湾 | 约 1,480 | 约 1,390 | 约 1,420 | 部分双向货物贸易额，只用来观察企业结算活动数量级 | 低 |
-| 欧洲、海湾至撒哈拉以南非洲重点市场 | 约 522 | 约 572 | 约 560 | 撒哈拉以南非洲收到的个人汇款总额；2025 为预测 | 低至中 |
-| 全球至拉美 | 1,570 | 1,656 | 1,737 | 拉美和加勒比收到的个人汇款总额 | 高 |
-| 美国消费者至全球 | 983 | 1,032 | 尚未发布 | 美国汇出的个人汇款总额；当前 WDI 可比实际值截至 2024 年 | 中 |
+表中的证据状态也必须分开理解：实际值来自已经发布的统计序列；暂定值仍可能修订；估算由公开总量和占比计算；预测描述未来或尚未齐备的年度；复合规模代理把不同公开序列拼在一起，只用于看数量级。
 
-这张表只能比较数量级。第一和第二组最接近具体走廊流量；第三组是贸易代理；第四和第五组是收款地区总量；第六组是汇出国总量。前两组也不是严格的自然年同比序列：印度、巴基斯坦和孟加拉按财政年度结束年份归类，菲律宾、印尼和其他地区数据主要按自然年归类。因此，不能因为拉美数字最大，就直接判断拉美最适合 UR，也不应从前两组计算精确增长率。
+## 三、从“市场有钱”到“UR 能赚钱”还要完成五项验证
 
-## 三、什么叫“需求还没有被当前 SP 满足”
+UR 最终出售的不是“印度覆盖”或“拉美覆盖”，而是一个具体付款组合：付款人所在司法管辖区、付款人类型、入金币种和方式、付款用途、收款人类型、收款币种和方式、金额范围及服务时效。宏观走廊只负责第一轮筛选。
 
-市场中存在 SP，只能证明“有办法付款”。一种付款同时满足以下六项，UR 才能把它当成可稳定销售的服务：
+一个付款组合要成为可售服务，需要依次通过六项检查：
 
-1. 合法：明确谁与客户签约、谁收钱、谁换汇、谁向收款人付款。
-2. 组合可用：付款人类型、收款人类型、币种、金额、用途和收款方式都被支持。
-3. 付款前确定：报价显示全部费用、汇率、收款人实收金额、有效期和预计到账时间。
-4. 付款中可处理：RFI 只要求必要资料，有明确责任人和响应时限，状态能通过 API 返回。
-5. 付款后可解释：到账、失败和退款都有唯一付款 ID、明确原因、金额和时间。
-6. 服务可持续：主 BFI 不报价或停机时，存在用真实小额付款验证过的替代 BFI 或备用 SP。
+1. 市场中存在足够的相关资金流。
+2. 目标客户确实在重复执行这类付款，并对现有结果不满意。
+3. UR 和汇出端 Partner 有权签约、收取资金并发起付款。
+4. UR 的 CPN 账户或备用服务商支持这个付款人、收款人、用途、金额和收款方式组合。
+5. 收款端金融机构能够持续报价、完成当地付款，并提供独立的备用路径。
+6. 全包成本、成功率、到账时间、退款和资金占用达到客户要求及 UR 的内部盈利门槛。
 
-CPN 支持的 BFI 原则上可以通过同一网络触达，但“可触达”只解决上述第二项的一部分：
+当前公开数据主要覆盖第 1 项，并为第 2 项提供少量区域性背景。第 3 至第 6 项必须用法律意见、客户付款日志、生产配置、真实报价和真实付款验证。
 
-- 账户配置说明 UR 可以请求哪些付款路径。
-- 报价说明某个时点是否有 BFI 愿意接单。
-- 创建付款后，BFI 才审查具体付款人、收款人和付款用途。
-- 只有真实试付和持续监控，才能证明成功率、到账时间、RFI 和退款表现。
+### 客户痛点、服务商成本和 UR 产品不能混成一件事
 
-所以，走廊建设的本质是：UR 确认某种付款背后有可靠的主 BFI 和可用的替代路径，从而敢把服务承诺卖给客户。
+| 观察对象 | 现实中的问题 | 它如何影响机会判断 |
+|---|---|---|
+| 客户结果 | 付款前不知道实收金额和时间，付款中反复补资料，付款后难以解释失败、退款和费用 | 只有客户访谈、工单、付款日志或竞品实测才能证明某个具体付款组合存在缺口 |
+| 服务商成本 | 单向流导致目标货币需要持续补充，还要承担 FX、流动性、合规和本地合作方成本 | 这是供应侧成本，不是客户痛点；只有当成本转化为高价、限额、停报价或延迟时，客户才会感知 |
+| UR 的产品 | 聚合报价、统一资料和状态、保存付款证据、管理主备路径 | 这些能力只有在结果优于客户现有服务时才构成差异，而不是功能清单本身 |
 
-Circle 的网络级公开数据进一步说明，不能从“已经接入 CPN”直接推出具体走廊已有冗余。2025 年第三季度业绩发布时，29 家金融机构已登记加入（enrolled）CPN，55 家正在接受资格审核；截至 2026 年 2 月 20 日，这两个数字增至 55 家和 74 家。按过去 30 天活动计算的年化交易量，则从 2025 年 11 月 7 日的 34 亿美元升至 2026 年 3 月 31 日的 83 亿美元。[Circle 2025 Q3 业绩材料](https://www.sec.gov/Archives/edgar/data/1876042/000187604225000045/nolivelinksversion_q3202.htm)、[Circle 2025 Q4 业绩材料](https://www.sec.gov/Archives/edgar/data/1876042/000187604226000032/final_circlereportsfourt.htm)、[Circle 2026 Q1 业绩材料](https://www.sec.gov/Archives/edgar/data/1876042/000187604226000148/final_05x11q1epr30.htm)
+消费者汇款 App、全球付款 API、银行和 CPN 也不是同一类竞争者。消费者产品已经能在主流走廊提供低价银行或现金汇款；Wise Platform、Nium、Thunes、TerraPay、Airwallex 等提供多国付款接口；银行提供账户、FX 和清算；CPN 提供机构间报价、合规信息交换和稳定币结算。本文所说的 Partner，是与终端客户直接签约或提供入金的合作机构。UR 需要比较的是客户最终购买的完整结果，而不是把这些机构放进同一张“国家覆盖数”排名。
 
-这些数字没有披露各机构是 OFI 还是 BFI、是否已经产生生产交易、支持哪些币种和收款方式。它们能证明网络在增长，但不能证明 UR 的某个付款组合已有两个可用 BFI；这个问题仍须查看 UR 账户配置、重复请求生产 Quote，并完成真实试付。
+因此，“公开资料没有证明某项服务已经满足”只能形成待验证问题，不能直接写成“需求没有被满足”。
 
-## 四、建议的进入顺序
+## 四、CPN 改变的是资金组织方式，不是最后一公里事实
 
-| 排名 | 走廊组 | 流量判断 | 未满足需求 | 与 UR 能力匹配 | 建议动作 |
-|---|---|---|---|---|---|
-| 1 | UAE、沙特至南亚和菲律宾 | 高，且增长快 | 中高 | 高 | 选 1 个汇出端 Partner 和 2 个收款国，验证平台或企业批量付款 |
-| 2 | 欧洲、瑞士至亚洲 | 中高，公开下限仍在增长 | 中 | 高 | 先做 CHF、EUR 机构资金入口和企业或平台付款，不做消费者营销 |
-| 3 | 欧洲、海湾至非洲重点市场 | 中 | 很高 | 中 | 只选 1–2 个国家；上线前验证第二个 BFI、周末流动性和退款 |
-| 4 | 新加坡、香港至欧洲和海湾 | 贸易活动很大 | 中 | 中 | 从现有 Partner 的真实账单和付款失败样本反推需求，不按贸易额立项 |
-| 5 | 全球至拉美 | 很高 | 中，主要集中在次级市场和运营环节 | 中低 | 先作为供应商采购和能力基准；有现成客户流量再进入 |
-| 6 | 美国消费者至全球 | 很高 | 有，但集中在最难服务的场景 | 低 | 暂缓自营消费者业务，只与持牌美国机构合作 |
+传统跨境服务商通常会在整个网络内轧差，而不是只在一条双边走廊内寻找反向付款。以印度为例，服务商可以用其他客户汇出的 INR、已有 INR 库存和反向交易抵消部分印度入账；仍然无法抵消的部分，才需要外部换汇、补充流动性或调整资金头寸。Wise 的公开说明和监管文件都表明，反向资金复用只是部分交易的结算方式，不会消除所有残余头寸。[Wise：How does Wise work](https://wise.com/gb/blog/how-does-wise-work)、[Wise：SEC registration statement](https://www.sec.gov/Archives/edgar/data/2099039/000119312526151439/d19735d20fr12b.htm)
 
-## 五、走廊一：UAE、沙特至印度、巴基斯坦、孟加拉、菲律宾
+CPN 不要求 UR 自己在每个收款国长期持有法币，但它没有让单向流消失：
 
-### 先看判断
+1. UR 以 USDC 请求一个具体付款组合的 Quote（即一次即时报价）。
+2. Beneficiary Financial Institution（BFI，收款端金融机构）在当时愿意承接时，返回汇率、费用、有效期和预计法币付款时间。
+3. BFI 收到 USDC 后，需要持有、买入或借入当地法币。
+4. BFI 或其下游银行、支付机构通过当地轨道付款。
+5. 当地法币不足、市场波动或合规成本上升时，结果会表现为点差扩大、限额降低、无报价、补资料或退款。
 
-- 2025 年流量：约 654 亿美元。其中印度采用 FY2024-25 暂定值，不是自然年 2025 实绩。
-- 核心场景：平台付款、企业工资和供应商付款。
-- 主要缺口：小额成本、批量付款、统一补资料、到账承诺、退款和对账。
-- UR 建议：首批验证，先做 UAE 至印度或巴基斯坦；不做个人现金汇款。
+所以，一个稳定 BFI 可以让 UR 不依赖客户的反向资金流，却不能消除当地法币流动性成本。BFI 的全包价格通常包含本地付款费、USDC 与当地法币之间的 FX 点差、资金占用、合规审查、下游合作方费用和失败退款风险。[Circle：CPN field guide](https://www.circle.com/blog/circle-payments-network-cpn-a-concise-field-guide-for-prospective-network-participants)、[Circle：Quotes](https://developers.circle.com/cpn/concepts/quotes)
 
-### 流量如何构成
+### “国家允许”“账户有路径”和“付款成功”是三种状态
 
-金额单位：亿美元。
+Circle 的国家表说明 CPN 被允许在哪些国家运营，但该页面明确提醒，并非所有允许国家都有当前可用路径。实际路径还取决于 UR 账户配置、目的国、币种、付款方式、金额和 use case（付款场景）。[Circle：CPN supported countries](https://developers.circle.com/cpn/references/compliance/supported-countries)、[Circle：Get supported payment routes](https://developers.circle.com/api-reference/cpn/cpn-platform/list-routes)
 
-| 收款市场 | 2023 | 2024 | 2025 | 计算依据 |
+| 收款市场 | 本地付款市场是否显示单一机构垄断 | CPN 公开证据 | 对 UR 的含义 |
+|---|---|---|---|
+| 印度 | 否。NEFT、IMPS 和 RTGS 有广泛银行参与，轨道本身成本较低 | Circle 已宣布一条由 Saber 支持的 INR 付款路径，公开文档列出 IMPS、NEFT 和 RTGS | 可以进入生产测试；仍需确认 B2B/B2P、金额、价格、下游银行和第二条独立路径 |
+| 巴基斯坦 | 否。Raast 有多家银行和支付机构参加 | 国家在允许清单中，但截至 2026-08-17，公开目的国和法币列表没有 PK 或 PKR | 不能公开宣称走廊已可用；先查 UR 生产配置、BFI 和当地授权银行 |
+| 孟加拉 | 未发现全国性垄断证据，但跨境资金必须经过授权银行，链路层级更多 | 国家在允许清单中，但当前公开路径未列 BDT；当地仍限制虚拟资产交易 | 四国中不确定性最高。2026 年新规则允许授权银行与境外数字 PSP 合作，并开放特定小额 B2C 出口收款，但 FX、账务、KYC 和报送仍由授权银行控制 |
+| 菲律宾 | 否。InstaPay、PESONet 及汇款机构参与面较广 | 国家在允许清单中，但截至 2026-08-17，公开目的国列表没有 PH；公开付款方式枚举出现 InstaPay 和 PESONet | 本地轨道不是主要疑点；先确认 UR 账户是否有生产路径以及有几条独立付款链 |
+
+Circle 于 2026 年 2 月宣布由 Saber 支持印度 INR 付款路径，覆盖 IMPS、NEFT 和 RTGS；这一公告证明至少有一条公开路径，不证明 UR 账户已启用全部付款场景，也不证明存在第二个 BFI。[Circle：India local-currency payout announcement](https://www.circle.com/blog/circle-payments-network-expands-local-currency-payout-corridors-across-asia-the-middle-east-europe-and-the-us)
+
+印度、巴基斯坦和菲律宾的公开资料不支持“本地付款被 BFI 垄断”这一结论。真正可能集中的是 CPN 内部针对某个具体付款组合的报价来源；Circle 没有公开逐路径 BFI 数量，因此只能从 UR 的生产账户和连续 Quote 得到答案。[RBI：NEFT FAQ](https://www.rbi.org.in/scripts/FAQView.aspx?Id=60)、[SBP：Raast P2P](https://www.sbp.org.pk/our-subsidiaries/raast/raast-person-to-person)、[BSP：Payment systems](https://www.bsp.gov.ph/SitePages/PaymentsAndSettlements/PaymentsAndSettlements.aspx/)
+
+Quote 也不是到账保证。创建付款后，BFI 仍可审查具体付款人、收款人和用途，发出 Request for Information（RFI，补充资料请求）；收款账户或本地银行仍可能拒绝，失败后还可能发生稳定币退款。[Circle：RFI](https://developers.circle.com/cpn/concepts/compliance/rfis)、[Circle：Payment states and refunds](https://developers.circle.com/cpn/concepts/payments/component-states-and-workflows)
+
+Circle 的网络数据只能说明 CPN 正在成长。2025 年第三季度有 29 家机构 enrolled（登记加入）、55 家接受资格审核；截至 2026 年 2 月 20 日，分别为 55 家和 74 家。截至 2026 年 3 月 31 日，按此前 30 天活动计算的年化交易量为 USD 8.3bn，对应约 USD 0.68–0.69bn 的最近 30 天交易量。公开材料没有拆分汇出端机构（OFI）、收款端机构（BFI）、生产状态或具体路径，因此既不能证明某条路径有冗余，也不能证明它一定缺少 BFI。[Circle 2025 Q3 业绩材料](https://www.sec.gov/Archives/edgar/data/1876042/000187604225000045/nolivelinksversion_q3202.htm)、[Circle 2025 Q4 业绩材料](https://www.sec.gov/Archives/edgar/data/1876042/000187604226000032/final_circlereportsfourt.htm)、[Circle 2026 Q1 业绩材料](https://www.sec.gov/Archives/edgar/data/1876042/000187604226000148/final_05x11q1epr30.htm)
+
+## 五、六组走廊的证据与当前决策
+
+下表把不同统计口径放在一起，只是为了显示每组研究目前推进到了哪一步，不用于比较市场大小。
+
+| 研究范围 | 最新可见规模 | 数字口径 | 公开证据能够说明什么 | 公开证据不能说明什么 | 当前决策 |
+|---|---:|---|---|---|---|
+| UAE、沙特至印度、巴基斯坦、孟加拉、菲律宾 | USD 64.7bn（2025 标签） | 双边个人汇款混合方法代理 | 个人资金长期单向流入四个收款市场，印度和巴基斯坦占主要部分 | 企业和平台需求、UR 可获取流量、BFI 成本 | 先验证 UAE 至印度；其他国家先查生产路径 |
+| 欧洲、瑞士至印度、菲律宾、印尼、越南 | USD 23.3bn（2025 标签） | 公开数据拼接的复合规模代理 | 已计来源存在可观个人资金流 | 完整欧洲规模、企业付款规模、整个地区趋势 | 与海湾假设并行验证 |
+| 新加坡、香港与欧洲、海湾 | USD 142.0bn（2025） | 部分双向货物贸易 | 企业结算活动数量级较大 | 单向付款、UR 客户需求和可处理金额 | 没有 Partner 日志前不立项 |
+| 全球至撒哈拉以南非洲 | USD 56.0bn（2025 预测） | 地区个人汇款总额 | 整个地区的个人收款资金池和高成本背景 | 欧洲或海湾贡献、某国 B2B/B2P 机会 | 先缩到具体国家和收款方式 |
+| 全球至拉美和加勒比 | USD 173.7bn（2025 估计） | 地区个人汇款总额 | 地区个人汇款资金池很大 | 特定来源走廊、企业付款和 UR 优势 | 只跟随已有客户流量 |
+| 美国个人汇款支出宏观口径 | USD 103.2bn（2024） | 汇出国个人汇款总额 | 美国是大型汇出市场 | 消费者 App 成交额、2025 可比实绩、UR 可服务市场 | 继续暂缓自营消费者业务 |
+
+## 六、海湾至南亚和菲律宾：单向流让 CPN 值得测试
+
+这组数据证明了大额、持续的个人资金流，不能证明企业批量付款已经形成未满足需求。其价值在于提出一个供应侧假设：当传统服务商需要持续补充 INR、PKR、BDT 和 PHP 时，CPN 能否通过 BFI 报价降低 UR 自己维护当地法币头寸的成本。
+
+### 个人汇款规模代理如何构成
+
+金额单位：USD billion。
+
+| 收款市场 | 2023 标签 | 2024 标签 | 2025 标签 | 计算方法与期间 |
 |---|---:|---:|---:|---|
-| 印度 | 291 | 307 | 351 | 印度 FY2022-23、FY2023-24、FY2024-25 的 BoP 私人转移贷方代理值乘以 RBI 披露的 UAE 19.2% 和沙特 6.7% 来源占比；FY2024-25 总额为暂定值，三年暂用同一占比估算 |
-| 巴基斯坦 | 112 | 130 | 172 | 巴基斯坦央行披露的沙特与 UAE 汇款相加 |
-| 孟加拉 | 68 | 74 | 84 | 孟加拉央行披露的沙特与 UAE 汇款相加 |
-| 菲律宾 | 41 | 43 | 47 | 菲律宾年度收款总额乘以菲律宾央行披露的沙特与 UAE 来源占比 |
-| 合计 | 512 | 554 | 654 | 按表内取整值相加；印度、巴基斯坦和孟加拉按财政年度结束年份归类，菲律宾按自然年归类 |
+| 印度 | 29.1 | 30.7 | 35.1 | 印度 FY2022-23、FY2023-24、FY2024-25 的 BoP 私人转移贷方代理值，乘以 RBI FY2023-24 调查中的 UAE 19.2% 和沙特 6.7%；最后一年为暂定值 |
+| 巴基斯坦 | 11.2 | 13.0 | 17.2 | 巴基斯坦央行披露的沙特和 UAE 汇款，按财政年度结束年份归类 |
+| 孟加拉 | 6.8 | 7.4 | 8.4 | 孟加拉央行披露的沙特和 UAE 汇款，按财政年度结束年份归类 |
+| 菲律宾 | 3.5 | 3.7 | 4.0 | 菲律宾央行直接披露的沙特和 UAE cash remittances，按自然年归类 |
+| 混合方法合计 | 50.6 | 54.8 | 64.7 | 统计期间和方法不同，只用于观察数量级，不用于计算严格增长率 |
 
-印度行现在统一使用印度国际收支中的私人转移贷方作为 inward remittances 代理：FY2022-23 约 1,125 亿美元、FY2023-24 约 1,187 亿美元、FY2024-25 约 1,354 亿美元，再乘以 25.9% 的 UAE 与沙特来源占比。它是贷方流入总额，不是扣除转移支出后的净额，也不等于纯粹的 P2P 工资汇款交易量；FY2024-25 仍为暂定值。截至本次核验，世界银行 WDI 公开表尚未给出印度 2025 自然年实绩，因此本版不再使用原稿的自然年 2025 数字。[印度议会：FY2022-23 与 FY2023-24 私人转移贷方](https://eparlib.sansad.in/bitstream/123456789/2989690/1/18_External_Affairs_6.pdf)、[RBI：FY2023-24 汇款调查](https://www.rbi.org.in/Scripts/BS_ViewBulletin.aspx?Id=23260)、[印度 Economic Survey 2025-26](https://www.indiabudget.gov.in/economicsurvey/doc/eschapter/echap04.pdf)
+印度总额依次约为 USD 112.5bn、USD 118.7bn 和 USD 135.4bn，再乘以 25.9% 的 UAE 与沙特来源占比。这里的私人转移贷方包含家庭赡养、储蓄及部分非居民存款在印度的本地提款，不是纯粹的 P2P 工资汇款，也不是 RBI 发布的双边实际流量。[印度议会：FY2022-23 与 FY2023-24 私人转移贷方](https://eparlib.sansad.in/bitstream/123456789/2989690/1/18_External_Affairs_6.pdf)、[印度 Economic Survey 2025-26](https://www.indiabudget.gov.in/economicsurvey/doc/eschapter/echap04.pdf)、[RBI：Changing Dynamics of India’s Remittances](https://www.rbi.org.in/Scripts/BS_ViewBulletin.aspx?Id=23260)
 
-为避免只改海湾侧造成口径不对称，本版把海湾与欧洲两组中的印度三年数字一起改为财政年度口径。它们可用于判断量级，不能与其他国家的自然年数字做严格同比。
+菲律宾改用央行 Table 11 直接披露的沙特和 UAE cash remittances，不再用全国总额乘来源占比。BSP 同时提醒，经美国总部汇款公司或美国代理行处理的交易可能被记录为美国来源，因此来源国数据仍可能失真。[BSP：Table 11](https://www.bsp.gov.ph/Statistics/External/Table%2011.pdf)
 
-RBI 披露，FY2023-24 印度收款约 1,187 亿美元，其中 UAE 占 19.2%、沙特占 6.7%。200 美元以下汇款的加权平均成本仍为 4.6%，高于联合国 3% 目标。[RBI：Changing Dynamics of India’s Remittances](https://www.rbi.org.in/Scripts/BS_ViewBulletin.aspx?Id=23260)
+### 消费者价格不能证明 BFI 成本
 
-世界银行 2025 年第三季度价格快照也显示，小额付款的固定成本仍然明显：发送 200 美元时，沙特至印度的平均成本为 5.59%，UAE 至印度为 3.72%；发送 500 美元时，成本分别降至 3.07% 和 2.19%。[World Bank：Saudi Arabia to India](https://remittanceprices.worldbank.org/corridor/Saudi%20Arabia/India)、[World Bank：UAE to India](https://remittanceprices.worldbank.org/corridor/United%20Arab%20Emirates/India)
+世界银行 2025 年第三季度价格快照显示，发送 USD 200 时，沙特至印度的样本平均成本为 5.59%，UAE 至印度为 3.72%；发送 USD 500 时分别降至 3.07% 和 2.19%。但 UAE 至印度的同一批样本中，Emirates NBD 的 USD 200 报价成本为 0.77%，Remitly 的一个银行入账报价为 1.04%。消费者价格痛点在同一走廊内分布不均，UR 若做零售产品，竞争基准应是低价数字渠道，而不是平均值。[World Bank：Saudi Arabia to India](https://remittanceprices.worldbank.org/corridor/Saudi%20Arabia/India)、[World Bank：UAE to India](https://remittanceprices.worldbank.org/corridor/United%20Arab%20Emirates/India)
 
-同一份 UAE 至印度样本也包含明显低于平均值的数字报价：发送 200 美元时，Emirates NBD 的样本成本为 0.77%，Remitly 的一个银行入账报价为 1.04%。这说明消费者价格痛点在同一走廊内分布不均。UR 若做消费者产品，实际对手是这些低价数字渠道，而不是 3.72% 的平均值；平均成本仍高，不能单独证明 UR 有零售价格优势。[World Bank：UAE to India provider sample](https://remittanceprices.worldbank.org/corridor/United-Arab-Emirates/India?order=field_cc2_fx_margin_calc&sort=asc)
+这些样本包含发送费和 FX margin，不是 CPN 的 BFI 批发报价。公开资料无法回答印度、巴基斯坦、孟加拉或菲律宾的 BFI 是否昂贵；这个问题只能通过同一金额、时段和付款组合的生产 Quote 比较。[World Bank：RPW Methodology](https://remittanceprices.worldbank.org/methodology)
 
-巴基斯坦从沙特和 UAE 收到的汇款从 FY2023 的约 112 亿美元增至 FY2025 的约 172 亿美元。[State Bank of Pakistan：FY2025 Statistical Supplement](https://www.sbp.org.pk/assets/document/publications/reports-annual-aarFY25-Statistical-Supplement-Complete-Statistical-Supplement.pdf) 孟加拉对应金额从约 68 亿美元增至约 84 亿美元。[Bangladesh Bank：年度汇款数据](https://www.bb.org.bd/en/index.php/econdata/bop_yearly/5)、[Bangladesh Bank：FY2023-24 季度报告](https://www.bb.org.bd/pub/quaterly/remittance_earnings/remittance%20april-june%202024.pdf)
+### 当前最小结论
 
-### 现有 SP 已经覆盖什么，仍缺什么
+- 已证实：四个市场存在长期个人流入，方向明显偏向收款国；印度、巴基斯坦和菲律宾的本地轨道没有显示全国性商业垄断。
+- 合理推断：这种方向不平衡会增加传统服务商补充目标货币的需要；CPN 可以把这项工作转给报价 BFI。
+- 尚未证实：平台工资、供应商付款或 B2P 是这些市场的前三大采购痛点；CPN 对相关组合有两个独立 BFI；UR 的全包成本优于现有服务。
 
-| 服务类型 | 代表 SP | 已经覆盖 | 仍未稳定解决 |
-|---|---|---|---|
-| 海湾消费者汇款 | Al Ansari Exchange、LuLu Exchange、STC Bank、urpay、Remitly、Western Union、MoneyGram | 网点或 App 获客、个人身份核验、银行或现金汇款 | 小额全包成本仍可能超过 3%；消费者产品不能直接满足企业批量付款、结构化补资料和逐笔对账 |
-| 全球付款 API | Nium、Thunes、TerraPay、Wise Platform | 一次接入多个国家和当地收款方式 | “支持印度”不能证明具体付款人、收款人、用途、金额和收款方式的组合可用，也不能证明有第二个稳定报价 |
-| 稳定币结算网络 | Circle CPN | 通过同一网络请求多个 BFI 报价，并用稳定币完成机构间结算 | 当次报价不能证明长期成功率、RFI 时限、退款时间和本地收款方式稳定可用 |
+因此，第一项生产测试应收窄为 UAE 受监管 Partner 或企业向印度企业银行账户付款。巴基斯坦只有在 UR 账户返回 PKR 路径和合法 use case 后再进入 Quote 测试；孟加拉先完成当地法律与 BFI 结构确认；菲律宾可以作为印度之外的备选收款市场。
 
-这组走廊缺的不是另一个个人汇款 App，而是一套面向平台、用工公司和支付机构的批量付款服务。客户需要在付款前锁定实收金额；付款时一次提交付款人、收款人、用途和发票；付款后拿到本地到账证明、失败原因和退款状态；主 BFI 不报价时，能切换到已经试过的替代路径。
+## 七、欧洲和瑞士至亚洲：与 UR 更匹配，但 B2B 需求仍待验证
 
-### UR 应怎么做
+这组数据与海湾组一样，主要来自个人汇款。它能够说明相关币种方向存在资金活动，不能直接证明供应商付款、平台卖家结算或全球用工付款的规模。
 
-首个试点建议选择 UAE 至印度或巴基斯坦，再用同一个汇出端 Partner 增加第二个收款国。这样可以复用 Partner 准入、合规资料和结算流动性。首期只做机构和平台付款，不做个人现金汇款。
+金额单位：USD billion。
 
-## 六、走廊二：欧洲、瑞士至印度、菲律宾、印尼、越南
-
-### 先看判断
-
-- 2025 年公开数据下限：约 233 亿美元，实际值更高。其中印度采用 FY2024-25 暂定值。
-- 核心场景：供应商付款、平台卖家付款和全球用工付款。
-- 主要缺口：企业收款人、钱包、付款用途、限额、RFI 和退款规则仍按国家分散。
-- UR 建议：先做印度和菲律宾，再考虑印尼和越南。
-
-### 公开数据能证明多少
-
-金额单位：亿美元。
-
-| 收款市场 | 2023 | 2024 | 2025 | 已计入的欧洲来源 |
+| 收款市场 | 2023 标签 | 2024 标签 | 2025 标签 | 已计入的欧洲来源 |
 |---|---:|---:|---:|---|
-| 印度 | 156 | 165 | 188 | 印度 FY2022-23、FY2023-24、FY2024-25 的 BoP 私人转移贷方代理值乘以 RBI 调查中的欧洲来源占比；计入英国、德国、比利时、爱尔兰、荷兰、瑞士、法国、意大利和西班牙 |
-| 菲律宾 | 38 | 39 | 40 | 菲律宾央行的欧洲地区汇款 |
-| 印尼 | 约 3 | 3 | 5 | Bank Indonesia 的欧洲地区汇款 |
-| 越南 | 未计入 | 未计入 | 未计入 | 只有全国收款总额，缺少可比的欧洲来源数据 |
-| 公开下限合计 | 197 | 207 | 233 | 按表内取整值相加；越南和部分欧洲来源未计入，实际值更高 |
+| 印度 | 15.6 | 16.5 | 18.8 | 英国、德国、比利时、爱尔兰、荷兰、瑞士、法国、意大利和西班牙；使用同一组印度财政年度总额和 RBI FY2023-24 来源占比 |
+| 菲律宾 | 3.8 | 3.9 | 4.0 | 菲律宾央行的欧洲地区个人汇款 |
+| 印尼 | 0.3 | 0.3 | 0.5 | Bank Indonesia 的欧洲地区移工汇款 |
+| 越南 | 未计入 | 未计入 | 未计入 | 有全国总额，缺少可比的欧洲来源数据 |
+| 复合规模代理 | 19.7 | 20.7 | 23.3 | 印度是估算，菲律宾和印尼是地区数据；不是数学下限，也不是完整市场规模 |
 
-印度行与海湾走廊的印度行使用同一套财政年度总额和同一份来源占比。RBI 的长期调查还显示，GCC 国家在印度汇款来源中的合计份额从 FY2016-17 表内分项合计的 46.7% 降至 FY2023-24 的 37.9%，美国达到 27.7%，英国从 3.0% 升至 10.8%。这说明英国至印度值得单独验证，但不能据此断言整个欧洲来源都在持续上升，也不能把欧洲走廊的公开下限当作完整市场份额。[RBI：Changing Dynamics of India’s Remittances](https://www.rbi.org.in/Scripts/BS_ViewBulletin.aspx?Id=23260)
+RBI 调查显示，GCC 国家在印度汇款来源中的份额从 FY2016-17 表内分项合计的 46.7% 降至 FY2023-24 的 37.9%，美国达到 27.7%，英国从 3.0% 升至 10.8%。这支持单独研究英国和印度之间的资金流，但不能证明整个欧洲来源持续增长。[RBI：Changing Dynamics of India’s Remittances](https://www.rbi.org.in/Scripts/BS_ViewBulletin.aspx?Id=23260)
 
-菲律宾央行提醒：若汇款经美国总部的汇款公司或美国代理行处理，来源可能被记录为美国，而不是付款人的真实居住国。因此，官方来源统计可能低估欧洲流量。[BSP：Overseas Filipinos’ Remittances](https://www.bsp.gov.ph/statistics/external/ofw2.aspx)
+FSB 2025 年数据能够证明跨境 B2B/B2P 在区域总体上仍有速度和透明度问题，但其样本方向、金额和统计总体与本报告的欧洲至亚洲组合不同，不能作为某条双边企业走廊的直接需求证据。[FSB：2025 Cross-border Payments Progress Report](https://www.fsb.org/uploads/P091025-1.pdf)
 
-印尼 2024 和 2025 年从欧洲收到的移工汇款分别约为 2.95 亿和 4.50 亿美元，远小于来自中东、新加坡和香港的金额。[Bank Indonesia：Indonesian Migrant Workers’ Remittances](https://www.bi.go.id/SEKI/tabel/TABEL5_31.pdf) 越南全国汇款在 2024 和 2025 年约为 145 亿和 150 亿美元，但公开资料不足以可靠拆出欧洲部分。[World Bank：Migration and Development Brief 40](https://documents1.worldbank.org/curated/en/099714008132436612/pdf/IDU-a9cf73b5-fcad-425a-a0dd-cc8f2f3331ce.pdf)
+欧洲方向仍值得与海湾方向并行验证，理由来自 UR 能力匹配，而不是宏观流量排名：UR 更接近 CHF/EUR 机构资金入口和欧洲机构客户关系。下一步应从现有客户或 Partner 取得真实付款日志，确认企业收款人、用途、金额、频率、现有费用、失败和对账成本；没有这些数据，不能把个人汇款代理值写成企业市场规模。
 
-### 现有 SP 已经覆盖什么，仍缺什么
+## 八、新加坡和香港与欧洲及海湾：贸易规模不能代替客户证据
 
-| 服务类型 | 代表 SP | 已经覆盖 | 仍未稳定解决 |
-|---|---|---|---|
-| 欧洲企业跨境账户和付款 | Wise Business、Airwallex、Nium、Convera、Corpay | EUR、GBP 等资金入口、多币种换汇和银行账户付款 | CHF 入口、企业收款人和当地钱包的组合覆盖不一致；不同用途所需资料、限额和退款时限仍需逐国确认 |
-| 平台付款 API | Wise Platform、Nium、Airwallex、Thunes | 批量付款、API 状态和部分本地网络 | 客户仍需自行连接订单、发票、RFI 和总账；公开国家覆盖不能证明某类企业收款人已经试付成功 |
-| CPN 路径 | Circle CPN 及网络中的 BFI | 统一请求报价，并用稳定币完成结算中段 | 不能替代欧洲获客的牌照分析，也不能替 UR 承担本地企业收款、外汇申报和失败处理责任 |
+公开资料没有完整的“亚洲企业向欧洲和海湾付款”数据库。以下数字只用于确认企业结算活动数量级。
 
-FSB 2025 年数据显示，亚太地区只有 25.6% 的批发跨境付款在一小时内入账。该地区接近一半的 B2B 和 B2P 服务仍未同时披露成本和速度。南亚更明显：披露成本的 B2B、B2P 服务中，只有 26.9% 同时披露速度。[FSB：2025 Cross-border Payments Progress Report](https://www.fsb.org/uploads/P091025-1.pdf)
+金额单位：USD billion。
 
-因此，缺口不是欧洲没有向亚洲付款的 SP，而是企业和平台难以获得一套跨国一致的服务：创建付款时知道需要什么资料，报价时知道实收金额和时限，付款停留在审查阶段时知道由谁处理，失败时知道资金何时退回，财务系统还能把付款、费用和原订单对应起来。
-
-### UR 应怎么做
-
-先验证印度和菲律宾，再考虑印尼和越南。UR 可以用 CHF 资金入口、机构客户关系、CPN 报价和统一的 RFI 与对账形成差异，但必须先确认可以在哪些欧洲国家主动寻找客户。
-
-## 七、走廊三：新加坡、香港至欧洲、瑞士、海湾
-
-### 先看判断
-
-- 2025 年可见双向货物贸易：约 1,420 亿美元。
-- 核心场景：企业应付账款、贸易服务和平台结算。
-- 主要缺口：多公司付款审批、发票匹配、实收金额确定、状态追踪和跨币种对账。
-- UR 建议：只从现有 Partner 的真实付款问题切入，不能根据宏观贸易额单独立项。
-
-### 为什么这里使用贸易额
-
-这组走廊的核心是企业付款，不是个人汇款。公开资料没有“新加坡或香港企业一年向欧洲和海湾付款多少”的完整数据库。本报告因此用双向货物贸易额观察结算活动数量级。
-
-金额单位：亿美元。
-
-| 已计入的贸易关系 | 2023 | 2024 | 2025 | 原始数据 |
+| 已计入的双向货物贸易 | 2023 | 2024 | 2025 | 数据边界 |
 |---|---:|---:|---:|---|
-| 新加坡与欧盟货物贸易 | 约 560 | 约 520 | 约 540 | 522 亿、481 亿和 477 亿欧元，再按年度平均汇率折算 |
-| 香港与欧盟货物贸易 | 约 650 | 约 630 | 约 630 | 604 亿、584 亿和 557 亿欧元，再按年度平均汇率折算 |
-| 香港与中东货物贸易 | 266 | 241 | 247 | 香港政府直接披露的美元金额 |
-| 可见部分合计 | 约 1,480 | 约 1,390 | 约 1,420 | 未计新加坡与海湾、英国和瑞士，也未计服务贸易 |
+| 新加坡与欧盟 | 56.0 | 52.0 | 54.0 | 欧元贸易额按年度平均汇率折算 |
+| 香港与欧盟 | 65.0 | 63.0 | 63.0 | 两个方向的货物贸易 |
+| 香港与中东 | 26.6 | 24.1 | 24.7 | 香港政府披露的美元金额 |
+| 可见部分合计 | 148.0 | 139.0 | 142.0 | 未计新加坡与海湾、英国、瑞士和服务贸易 |
 
-欧盟资料显示，新加坡与欧盟的货物贸易在 2023、2024 和 2025 年分别约为 522 亿、481 亿和 477 亿欧元。[European Commission：EU trade with Singapore](https://webgate.ec.europa.eu/isdb_results/factsheets/country/details_singapore_en.pdf) 香港与欧盟 2024 和 2025 年贸易分别为 584 亿和 557 亿欧元，2023 年由官方同比变化反推约 604 亿欧元。[Hong Kong Trade and Industry Department：Hong Kong–EU Trade Relations](https://www.tid.gov.hk/en/our_work/statistics/trade_partners/eu.html) 香港与中东 2023 和 2024 年贸易分别约为 266 亿和 241 亿美元，2025 年约为 247 亿美元。[香港政府：2023–2024 年中东贸易数据](https://www.info.gov.hk/gia/general/202601/21/P2026012100524p.htm)、[香港政府：2025 年中东贸易数据](https://www.info.gov.hk/gia/general/202603/18/P2026031800337.htm)
+[European Commission：EU trade with Singapore](https://webgate.ec.europa.eu/isdb_results/factsheets/country/details_singapore_en.pdf)、[Hong Kong Trade and Industry Department：Hong Kong–EU Trade Relations](https://www.tid.gov.hk/en/our_work/statistics/trade_partners/eu.html)、[香港政府：2025 年中东贸易数据](https://www.info.gov.hk/gia/general/202603/18/P2026031800337.htm)
 
-这些数字只能证明企业结算活动很大。双向贸易额包含从欧洲和海湾付向亚洲的反方向资金，也不等于支付服务商可以处理的金额。
+双向贸易额包含欧洲或海湾付向亚洲的反方向资金，也包含可能通过银行信用证、集团资金中心或其他方式结算的贸易。它不能说明 Airwallex、Wise、Nium、银行或现有财务系统在哪个具体环节没有满足客户。
 
-### 现有 SP 已经覆盖什么，仍缺什么
+因此，这组市场不应根据 USD 142.0bn 立项。只有现有 Partner 的账单、付款失败样本或财务流程显示 CHF 入口、实收金额、审批、发票匹配、退款或跨服务商对账正在造成可量化成本时，才进入产品验证。
 
-| 服务类型 | 代表 SP | 已经覆盖 | 仍未稳定解决 |
-|---|---|---|---|
-| 多币种企业账户 | Airwallex、Wise Business、Nium、Banking Circle | SGD、HKD、EUR、GBP 等账户、换汇和银行付款 | 集团内多公司的付款审批、发票与采购订单匹配、费用分摊、收款人验证和退款仍常留给客户处理 |
-| 大额企业换汇和付款 | Convera、Corpay、银行 | 大额换汇、远期和银行信用 | 面对平台型高频小额付款时，API 状态、逐笔对账和本地收款方式未必同样成熟 |
-| 稳定币基础设施 | Circle CPN、BVNK、Bridge 等 | 机构间 24/7 结算和部分法币出入金 | 不能自动补齐贸易资料、最终收款银行费用、当地截单时间和退汇原因 |
+## 九、全球至撒哈拉以南非洲：客户痛点强，交付风险也最强
 
-这里最值得解决的是财务确定性，而不是单纯提高链上结算速度：报价时锁定实收金额和有效期；付款时绑定合同、发票和采购订单；付款状态对应到每张单据；失败时返回明确原因；集团财务能在同一份日终文件中核对本金、汇率、费用和退款。
+这里能看到的是全球来源的地区个人汇款总额，不是欧洲或海湾至非洲的双边流量。世界银行公开序列显示，撒哈拉以南非洲 2023 和 2024 年收到约 USD 52.2bn 和 USD 57.2bn；2025 年约 USD 56.0bn 是预测，不是完整实际值，因此不能据此判断同比下降。[World Bank：Personal remittances received](https://data.worldbank.org/indicator/BX.TRF.PWKR.CD.DT)、[World Bank：Migration and Development Brief 40](https://documents1.worldbank.org/curated/en/099714008132436612/pdf/IDU-a9cf73b5-fcad-425a-a0dd-cc8f2f3331ce.pdf)
 
-### UR 应怎么做
+消费者价格痛点有更直接的证据：世界银行 2025 年第三季度样本中，向撒哈拉以南非洲发送 USD 200 的平均成本为 8.46%，在各地区中最高。FSB 报告还显示，非洲收款侧只有 24.2% 的批发跨境付款在一小时内入账。不过，这些是地区性指标，不能证明某个欧洲或海湾来源的 B2B/B2P 组合无人服务。[World Bank：RPW Q3 2025](https://remittanceprices.worldbank.org/sites/default/files/2026-04/RPW_main_report_and_annex_Q325.pdf)、[FSB：2025 Cross-border Payments Progress Report](https://www.fsb.org/uploads/P091025-1.pdf)
 
-Airwallex、Wise、Nium 和银行已经占据较强位置。只有当客户明确需要 CHF 账户、稳定币资金调度、CPN 多 BFI 报价，或者需要统一多家现有 SP 的状态时，UR 才有明确切入点。应先分析 2–3 家现有 Partner 的真实应付账款和付款失败样本，再决定是否立项。
+非洲不能作为一条走廊采购。UR 必须先选定国家、收款人类型和银行账户或钱包，再验证当地 FX、周末流动性、姓名匹配、RFI、失败和退款。这里需要的是两条真正独立的付款路径，而不只是两个 BFI 名称；两家 BFI 如果依赖同一家当地银行或同一流动性来源，仍然属于同一个故障点。
 
-## 八、走廊四：欧洲、海湾至撒哈拉以南非洲重点市场
+## 十、全球至拉美和加勒比：大市场适合跟随客户，不适合凭总量进入
 
-### 先看判断
+金额单位：USD billion。
 
-- 2025 年地区汇款总额：约 560 亿美元，属于官方预测，不是完整实际值。
-- 核心场景：平台付款、工资和供应商付款。
-- 主要缺口：成本最高，银行、钱包和现金分散，外汇和本地流动性不稳定，替代路径少。
-- UR 建议：只选 1–2 个国家，必须验证第二个 BFI 和退款表现。
+| 年份 | 地区个人汇款流入 | 数据状态 |
+|---|---:|---|
+| 2023 | 157.0 | 世界银行 WDI 实际值 |
+| 2024 | 165.6 | 世界银行 WDI 实际值 |
+| 2025 | 173.7 | 美洲开发银行估计 |
 
-### 这里能看到的是地区总量，不是双边流量
+两个机构的估算方法不同，不能用这张混合序列表计算精确增长率。2025 年估计中，墨西哥约 USD 62.5bn，中美洲约 USD 55.5bn，南美洲约 USD 35.3bn；墨西哥与中美洲的方向并不相同，因此地区总量不能替 UR 选择首个国家。[IDB：Remittances to LAC after the 2025 surge](https://www.iadb.org/en/blog/migration/remittances-latin-america-and-caribbean-ease-after-2025-surge)、[Banco de México：Remittances](https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA11&locale=es&sector=1)
 
-世界银行公开序列显示，撒哈拉以南非洲 2023 和 2024 年收到的个人汇款约为 522 亿和 572 亿美元。2025 年完整实际值仍不齐；世界银行此前预测约为 560 亿美元。因此，不能用 2025 年数字判断市场同比下降。[World Bank：Personal remittances received](https://data.worldbank.org/indicator/BX.TRF.PWKR.CD.DT)、[World Bank：Migration and Development Brief 40](https://documents1.worldbank.org/curated/en/099714008132436612/pdf/IDU-a9cf73b5-fcad-425a-a0dd-cc8f2f3331ce.pdf)
+主流个人汇款、PIX、SPEI、本地银行和现金网络已有 Remitly、Western Union、Wise、dLocal、EBANX、Bitso 等成熟替代方案。美国至墨西哥的 USD 200 汇款在世界银行 2025 年第三季度样本中平均成本为 4.54%；IDB 引用的行业数据称，Bitso 2024 年处理超过 USD 6.5bn 的美墨汇款。稳定币中段已经规模化，因此“使用稳定币”本身不能形成 UR 的差异。[World Bank：United States to Mexico](https://remittanceprices.worldbank.org/corridor/United%20States/Mexico)、[IDB：Stablecoins and remittances](https://www.iadb.org/en/blog/research-development/whats-impact-stablecoins-remittances-and-regulatory-risks)
 
-总额包含北美、欧洲、海湾和其他地区来源，公开数据不足以可靠拆出欧洲和海湾的双边部分。若只看尼日利亚、肯尼亚和加纳三个较大市场，三国 2023 和 2024 年收款合计约为 262 亿和 302 亿美元，可用于首轮国家筛选。
+拉美只应在现有 Partner 已有明确国家、收款方式和交易日志时验证。验证重点是收款人校验、当地税务字段、失败原因、退款和多服务商对账，而不是“是否覆盖拉美”。
 
-### 现有 SP 已经覆盖什么，仍缺什么
+## 十一、美国个人汇款支出：规模大，但不适合 UR 自营消费者业务
 
-| 服务类型 | 代表 SP | 已经覆盖 | 仍未稳定解决 |
-|---|---|---|---|
-| 全球现金和银行汇款 | Western Union、MoneyGram、Ria | 现金网点、消费者品牌和部分银行入账 | 成本高；企业 API、逐笔对账和失败原因不一定满足平台需求；现金场景的欺诈和客服成本高 |
-| 非洲银行和钱包网络 | Onafriq、Thunes、TerraPay、Nium、dLocal | 多国银行和移动钱包覆盖 | 部分国家或钱包仍依赖单一合作方；本地换汇、流动性和监管变化会让报价或收款方式临时消失；退汇时间不确定 |
-| 稳定币结算中段 | Circle CPN 及其他稳定币 SP | 减少部分预置资金和结算等待 | 最后一公里仍需要当地法币、银行或钱包流动性；稳定币不能消除资本管制、现金偏好和本地报送要求 |
+世界银行 WDI 当前记录的美国个人汇款支出宏观口径为：2023 年 USD 98.3bn、2024 年 USD 103.2bn。截至本次核验，2025 年可比实际值尚未发布。该指标包含个人转移和雇员报酬，不能直接当成消费者汇款 App 的成交额。[World Bank：Personal remittances paid](https://data.worldbank.org/indicator/BM.TRF.PWKR.CD.DT)、[World Bank：WDI metadata](https://databank.worldbank.org/metadataglossary/world-development-indicators/series/BM.TRF.PWKR.CD.DT)
 
-世界银行 2025 年第三季度数据中，发送 200 美元到撒哈拉以南非洲的平均成本为 8.46%，在各地区中最高。2024 年样本中，沙特至苏丹、UAE 至苏丹等走廊没有符合世界银行 SmaRT 低成本基准的服务。[World Bank：Remittance Prices Worldwide Q3 2025](https://remittanceprices.worldbank.org/sites/default/files/2026-04/RPW_main_report_and_annex_Q325.pdf)、[World Bank：Remittance Prices Worldwide Q3 2024](https://remittanceprices.worldbank.org/sites/default/files/rpw_main_report_and_annex_q324.pdf)
+从 2026 年 1 月 1 日起，美国对部分消费者汇款征收 1% 税，但主要覆盖现金、money order（汇票类支付工具）和 cashier’s check（银行本票）等实物工具入金；从美国金融机构账户或美国发行的借记卡、信用卡入金通常不适用，企业付款也不在这一消费者汇款定义内。[美国国会：Public Law 119-21 §70604](https://www.congress.gov/bill/119th-congress/house-bill/1/text?lv=true)、[IRS：Remittance transfer tax](https://www.irs.gov/irb/2025-43_IRB)
 
-FSB 将高成本与以下因素联系起来：对美元现金依赖高、竞争弱、非银行 SP 难以直接接入支付系统、报送要求重、农村金融网点少。2025 年，非洲只有 24.2% 的批发跨境付款在一小时内入账。[FSB：2025 Cross-border Payments Progress Report](https://www.fsb.org/uploads/P091025-1.pdf)
+UR 暂缓美国消费者业务的主要理由仍然是逐州牌照或持牌合作、消费者保护、反欺诈、拒付、全天客服、现金网络和获客成本。瑞士牌照和 CPN 接入不能明显降低这些成本。如果已有美国机构客户带来流量，应由持牌美国机构负责客户关系和入金，UR 只评估机构间结算或收款端编排。
 
-### UR 应怎么做
+## 十二、下一步用生产数据决定是否上线
 
-不能把非洲当成一条走廊。UR 应选一个银行账户覆盖成熟的市场和一个移动钱包使用较多的市场，分别验证主 BFI、替代 BFI、汇率差价、周末流动性、收款人姓名匹配、RFI、失败和退款。没有第二个已试过的 BFI 时，不应向客户承诺稳定服务。
+首轮只验证三个具体付款组合，其中第三个组合以生产配置确实返回路径为前提：
 
-## 九、走廊五：全球至拉美
+1. UAE 受监管 Partner 或企业至印度企业银行账户：B2B 供应商付款，内部试验金额 USD 5,000–50,000。
+2. 瑞士或欧洲机构至菲律宾企业或个人银行账户：B2B/B2P 平台付款，内部试验金额 USD 500–10,000。
+3. UAE 受监管 Partner 至巴基斯坦个人银行账户或钱包：企业对个人（B2P）平台付款，内部试验金额 USD 100–2,000；CPN API 把这种发送方与收款人组合称为 B2C。没有 PKR 生产路径时停止该项。
 
-### 先看判断
+这些金额只是覆盖小额、中额和较大额 Quote 行为的内部试验参数，不是市场平均客单价。
 
-- 2025 年地区汇款总额：约 1,737 亿美元。
-- 核心场景：商户结算和平台付款。
-- 主要缺口：集中在次级国家、企业付款、收款人验证、当地税务字段、失败原因和退款。
-- UR 建议：先作为供应商采购和价格基准；已有客户流量时再进入。
+### 生产验证分四步
 
-### 流量范围
+| 阶段 | 要取得的证据 | 这一阶段能够决定什么 |
+|---|---|---|
+| 客户证据 | 真实付款日志、当前费用、失败和退款样本、对账工时、客户要求的到账时效 | 问题是否真实、是否重复、客户是否愿意更换或付费 |
+| 合法性与账户配置 | 签约和资金流法律意见；UR 账户中的目的国、币种、付款方式、use case、限额和所需字段 | 该组合能否进入 Quote，而不是只在国家允许清单中出现 |
+| 连续 Quote | 至少覆盖工作日、周末、当地节假日和不同金额段；记录报价来源、原始中间价、全部费用、实收金额、有效期和预计时间 | BFI 报价是否持续、价格是否稳定、是否存在独立备选路径 |
+| 真实小额付款 | 付款批准、RFI、当地实际入账、账单信息、失败、退款和异常升级 | Quote 之后的端到端结果能否达到客户要求 |
 
-金额单位：亿美元。
+每个组合连续采集四周数据，至少记录：可报价路径数、全包成本和波动、付款批准率、RFI 率、P50/P95 实际到账时间（即 50% 和 95% 的付款分别在多久内到账）、失败率、退款时间、周末表现、收款方式和资金占用。
 
-| 年份 | 拉美和加勒比收到的个人汇款 |
-|---|---:|
-| 2023 | 1,570 |
-| 2024 | 1,656 |
-| 2025 | 1,737 |
+业务、合规和运营需要在试点前共同设定通过、暂停和退出门槛。本报告不替团队编造数值。最少要覆盖五类决定：
 
-2023 和 2024 使用世界银行 WDI；2025 使用美洲开发银行 2026 年发布的最新估计。美洲开发银行自己的序列估计 2025 年增长 7.3%，其中墨西哥约 625 亿美元、中美洲约 555 亿美元、南美洲约 353 亿美元。两个机构对 2024 年的估算方法不同，因此不能用表内混合序列反算增长率。[World Bank：Personal remittances received](https://data.worldbank.org/indicator/BX.TRF.PWKR.CD.DT)、[IDB：Remittances to LAC after the 2025 surge](https://www.iadb.org/en/blog/migration/remittances-latin-america-and-caribbean-ease-after-2025-surge)
+- 客户需求是否达到立项门槛。
+- 汇出端和收款端责任是否已经被法律意见与合同确认。
+- 是否存在两条真实试付过、下游银行或流动性来源不完全相同的付款路径；或者一条 CPN 路径加一条独立备用服务商路径。
+- 到账、RFI、失败和退款是否达到目标客户提出的时效。
+- 全包成本、UR 毛利和流动性占用是否达到内部财务门槛。
 
-地区总额还会掩盖国家间的反向变化。墨西哥央行的 2025 年修订值约为 625 亿美元，同比下降 3.9%；同期中美洲仍快速增长。因此，1,737 亿美元只能用来判断拉美整体资金池，不能替 UR 选择首个国家。[Banco de México：Remittances](https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA11&locale=es&sector=1)、[IDB：Remittances to LAC after the 2025 surge](https://www.iadb.org/en/blog/migration/remittances-latin-america-and-caribbean-ease-after-2025-surge)
+只有这组数据能够支持上线或停止决定。宏观流量和国家覆盖不能替代它。
 
-### 现有 SP 已经覆盖什么，仍缺什么
+## 十三、结论的证据边界
 
-| 服务类型 | 代表 SP | 已经覆盖 | 仍未稳定解决 |
-|---|---|---|---|
-| 全球个人汇款 | Remitly、Wise、Xoom、Western Union、MoneyGram、Ria | 美国至墨西哥等主流走廊，现金和银行入账 | 次级国家、非主流钱包和现金点仍分散；不同服务对最终费用和实收金额的披露程度不一 |
-| 拉美本地支付网络 | dLocal、EBANX、Nium、Thunes | PIX、SPEI、本地银行和多种收款方式 | 企业和平台仍需处理收款人验证、税号、付款用途、当地退款和多 SP 对账；国家覆盖数不能证明这些字段完整可用 |
-| 稳定币路径 | Bitso、Circle CPN、BVNK、Bridge 等 | 美元和本地货币之间更快的机构结算 | 不能自动解决当地银行账户、现金、税务字段和合规审查；中段费用低不等于收款人端总成本低 |
+| 判断 | 当前证据强度 | 可以写到什么程度 |
+|---|---|---|
+| 海湾至四国存在较大的个人资金流 | 中 | 混合方法代理显示 2025 标签约 USD 64.7bn；不能计算严格增长率 |
+| 欧洲和瑞士至亚洲规模约 USD 23.3bn | 中低 | 这是公开数据拼接的复合代理；不是下限，也不是完整市场规模 |
+| 企业客户普遍缺少透明、可对账的服务 | 中低 | FSB 支持全球和区域层面的速度、成本及披露问题；具体走廊仍需客户和生产证据 |
+| 印度、巴基斯坦、孟加拉或菲律宾 BFI 昂贵或被垄断 | 不足 | 公开资料不能证明；孟加拉只能证明银行中介和监管步骤更多 |
+| 一个稳定 BFI 可以解决单向流 | 机制上部分成立 | 它让 UR 不必依赖反向客户流，但流动性、use case、下游银行、失败退款和备用路径仍然存在 |
+| UR 在某条走廊有可盈利机会 | 尚未验证 | 只能写成试点假设，等待客户、法律、Quote、真实付款和单位经济共同验证 |
 
-FSB 2025 年数据显示，向拉美发送 200 美元的平均成本仍为 5.7%，与 2023 年相同；60.6% 的服务可在一小时内到账，速度改善但成本没有同步下降。拉美发出的 P2P 付款平均成本为 3.4%，46%–55% 的 B2P 和 P2P 走廊成本超过 3%。[FSB：2025 Cross-border Payments Progress Report](https://www.fsb.org/uploads/P091025-1.pdf)
+其余主要限制如下：
 
-美国至墨西哥的 200 美元汇款在世界银行 2025 年第三季度样本中平均成本为 4.54%。美洲开发银行引用的行业数据称，Bitso 2024 年处理超过 65 亿美元的美墨汇款，说明稳定币结算中段已经开始规模化，也说明“使用稳定币”本身不能成为 UR 的差异。[World Bank：United States to Mexico corridor](https://remittanceprices.worldbank.org/corridor/United%20States/Mexico)、[IDB：Stablecoins, remittances and regulatory risks](https://www.iadb.org/en/blog/research-development/whats-impact-stablecoins-remittances-and-regulatory-risks)
+- 印度来源占比暂按 FY2023-24 应用于三年，可能高估或低估年度变化。
+- 印度、巴基斯坦和孟加拉使用财政年度；菲律宾等市场主要使用自然年。年度标签不能当成完全一致的自然年序列。
+- 2025 非洲数字是预测，2025 拉美数字是估计，美国 2025 WDI 实绩尚未发布。
+- 世界银行 Remittance Prices Worldwide 是特定日期、金额和样本服务的消费者价格快照，不是全年成交均价、BFI 批发成本或 UR 单位经济。
+- 服务商名单用于说明产品类型，不是完整市场份额或生产覆盖清单。
+- 两个 BFI 名称不一定形成独立冗余；下游银行、FX 流动性来源和本地轨道也必须不同。
 
-### UR 应怎么做
-
-若现有 Partner 已经有拉美平台付款需求，可以从一个即时支付轨道成熟的国家开始，重点提供统一报价、收款人验证、明确的失败原因和对账，而不是宣传“覆盖拉美”。
-
-## 十、走廊六：美国消费者至全球
-
-### 先看判断
-
-- 最新可比实际值：2024 年约 1,032 亿美元；2025 年 WDI 实绩尚未发布。
-- 核心场景：个人向海外家庭汇款。
-- 主要缺口：集中在现金、证件不足、低数字化、高风险和高客服成本场景。
-- UR 建议：暂缓自营消费者业务，只与持牌美国机构合作。
-
-### 流量范围
-
-世界银行 WDI 当前记录的美国个人汇款汇出额为：2023 年 983 亿美元、2024 年 1,032 亿美元。截至本次核验，公开表尚未提供 2025 年可比实际值，因此本版不再沿用原稿的 1,071 亿美元。[World Bank：Personal remittances paid](https://data.worldbank.org/indicator/BM.TRF.PWKR.CD.DT)
-
-从 2026 年 1 月 1 日起，美国对部分消费者汇款征收 1% 的消费税，但适用范围主要是现金、money order（汇票类支付工具）和 cashier’s check（银行本票）等实物工具入金；从美国金融机构账户或美国发行的借记卡、信用卡入金通常不适用，企业付款也不在这一消费者汇款定义内。它增加了现金型消费者产品的代收和申报负担，但不是 UR 暂缓美国业务的主要理由；更大的障碍仍是逐州牌照、消费者运营和竞争成本。[美国国会：Public Law 119-21 §70604](https://www.congress.gov/bill/119th-congress/house-bill/1/text?lv=true)、[IRS：Remittance transfer tax](https://www.irs.gov/irb/2025-43_IRB)
-
-### 现有 SP 已经覆盖什么，仍缺什么
-
-| 服务类型 | 代表 SP | 已经覆盖 | 仍未稳定解决 |
-|---|---|---|---|
-| 数字汇款 App | Remitly、Wise、Xoom、WorldRemit | 主流国家的 App、银行卡或银行账户入金和数字追踪 | 边缘国家、现金收款、证件不足或姓名不一致的用户仍难服务；复杂付款停滞需要高成本客服 |
-| 现金和全渠道网络 | Western Union、MoneyGram、Ria | 现金入金、现金收款和广泛网点 | 成本和汇率透明度不一；网点和欺诈管理成本高 |
-| 平台或银行合作 | Visa Direct、Mastercard Move、银行、持牌聚合商 | 卡网络、银行分发和美国合规框架 | 新进入者仍需逐州牌照或持牌合作方；欺诈、拒付、消费者保护和营销成本不会因为接入一条 API 而消失 |
-
-FSB 2025 年报告显示，北美发出的 B2B 和 B2P 跨境付款平均成本已超过 3%；两类服务中，同时披露成本和速度的比例约为 25%，付款速度也仍然偏低。[FSB：2025 Cross-border Payments Progress Report](https://www.fsb.org/uploads/P091025-1.pdf)
-
-剩余需求集中在最难运营的人群和目的地。服务这些客户需要消费者品牌、反欺诈、拒付处理、全天客服、现金网络和美国牌照。UR 现有的瑞士牌照与 CPN 接入不能明显降低这些成本。
-
-### UR 应怎么做
-
-继续暂缓面向消费者的美国业务。若有美国流量，应由已经持牌的银行或支付平台承接客户和入金，UR 只提供机构间结算或收款端编排。
-
-## 十一、下一轮不要再研究国家，要验证具体付款组合
-
-宏观数据只能帮助排序，不能回答毛利和服务稳定性。下一轮建议验证三个具体组合：
-
-1. UAE 机构资金至印度企业银行账户：供应商付款，单笔 5,000–50,000 美元。
-2. UAE 机构资金至巴基斯坦个人银行账户或钱包：平台 B2P，单笔 100–2,000 美元。
-3. 瑞士机构资金至菲律宾企业或个人银行账户：平台结算，单笔 500–10,000 美元。
-
-每个组合连续采集 4 周数据：可报价 BFI 数量、全包成本、报价波动、付款批准率、RFI 率、50% 和 95% 付款的到账时间、失败率、退款时间、周末表现和可用收款方式。
-
-这些数据才能回答三个商业问题：UR 每笔能留下多少收入，需要占用多少流动性，能够向客户承诺怎样的服务时效。
-
-## 十二、方法限制与数据说明
-
-- 双边个人汇款没有完整的 2023–2025 全球实际数据库。印度等数字使用官方总额与来源占比估算，不是逐笔银行数据。
-- 印度来源占比暂按 FY2023-24 应用于三年，可能低估或高估年度变化。
-- 印度的年度总额统一使用 FY2022-23、FY2023-24 和 FY2024-25 的 BoP 私人转移贷方代理值，来源占比使用 RBI FY2023-24 银行调查。它们用于估算数量级，不是 RBI 发布的双边实际流量，也不是纯粹的 P2P 工资汇款；FY2024-25 总额仍为暂定值。
-- 印度、巴基斯坦、孟加拉采用财政年度，本报告按财政年度结束年份归类；菲律宾等采用自然年。前两组因此不是严格可比的自然年同比序列。
-- 欧洲至亚洲的数字是公开数据下限。越南和部分欧洲来源未计入，不能用来判断完整市场份额。
-- 新加坡、香港走廊使用双向货物贸易额，只能说明结算需求的数量级，不能当作 UR 可处理流量或单向付款额。
-- 非洲 2025 使用世界银行预测，因为完整实际值仍未齐，不能据此判断同比下降。
-- SP 名单不是完整市场名单，也不代表具体走廊已经在生产环境开通。采购时仍须查询账户配置、当时报价、付款审查条件和合同责任。
-- CPN 公布的机构数与全网交易量没有拆分 OFI、BFI、生产状态和付款方式，不能证明某个付款组合已有多个可用 BFI。
-- 世界银行 Remittance Prices Worldwide 是特定时间、金额和服务样本的价格快照，不代表全年所有客户的平均成交价格。[World Bank：RPW Methodology](https://remittanceprices.worldbank.org/methodology)
-- 流量大、成本高只能证明问题存在。UR 是否有机会，还取决于牌照边界、客户获取、上游报价、收款成功率和单位经济。
-
-## 十三、主要数据源
+## 十四、主要数据源
 
 - [World Bank：Personal remittances received](https://data.worldbank.org/indicator/BX.TRF.PWKR.CD.DT)
 - [World Bank：Personal remittances paid](https://data.worldbank.org/indicator/BM.TRF.PWKR.CD.DT)
+- [World Bank：WDI remittance metadata](https://databank.worldbank.org/metadataglossary/world-development-indicators/series/BX.TRF.PWKR.CD.DT)
 - [World Bank：Migration and Development Brief 40](https://documents1.worldbank.org/curated/en/099714008132436612/pdf/IDU-a9cf73b5-fcad-425a-a0dd-cc8f2f3331ce.pdf)
 - [World Bank：Remittance Prices Worldwide Q3 2025](https://remittanceprices.worldbank.org/sites/default/files/2026-04/RPW_main_report_and_annex_Q325.pdf)
 - [FSB：G20 Roadmap for Cross-border Payments, 2025](https://www.fsb.org/2025/10/g20-roadmap-for-cross-border-payments-consolidated-progress-report-for-2025/)
 - [RBI：Changing Dynamics of India’s Remittances](https://www.rbi.org.in/Scripts/BS_ViewBulletin.aspx?Id=23260)
 - [State Bank of Pakistan：FY2025 Statistical Supplement](https://www.sbp.org.pk/assets/document/publications/reports-annual-aarFY25-Statistical-Supplement-Complete-Statistical-Supplement.pdf)
 - [Bangladesh Bank：Annual Remittance Data](https://www.bb.org.bd/en/index.php/econdata/bop_yearly/5)
-- [BSP：Overseas Filipinos’ Remittances](https://www.bsp.gov.ph/statistics/external/ofw2.aspx)
+- [Bangladesh Bank：2026 cross-border digital payment framework](https://www.bb.org.bd/mediaroom/circulars/fepd/jul292026fepd-125e.pdf)
+- [Bangladesh Bank：2026 B2C export-platform rules](https://www.bb.org.bd/mediaroom/circulars/fepd/jun152026fepd-112e.pdf)
+- [BSP：Overseas Filipinos’ Remittances Table 11](https://www.bsp.gov.ph/Statistics/External/Table%2011.pdf)
 - [Bank Indonesia：Indonesian Migrant Workers’ Remittances](https://www.bi.go.id/SEKI/tabel/TABEL5_31.pdf)
 - [European Commission：EU trade with Singapore](https://webgate.ec.europa.eu/isdb_results/factsheets/country/details_singapore_en.pdf)
 - [Hong Kong Trade and Industry Department：Hong Kong–EU Trade Relations](https://www.tid.gov.hk/en/our_work/statistics/trade_partners/eu.html)
 - [Inter-American Development Bank：2025 LAC remittance estimate](https://www.iadb.org/en/blog/migration/remittances-latin-america-and-caribbean-ease-after-2025-surge)
-- [印度议会：FY2022-23 与 FY2023-24 私人转移贷方](https://eparlib.sansad.in/bitstream/123456789/2989690/1/18_External_Affairs_6.pdf)
-- [印度 Economic Survey 2025-26](https://www.indiabudget.gov.in/economicsurvey/doc/eschapter/echap04.pdf)
-- [Circle 2026 Q1：CPN network disclosures](https://www.sec.gov/Archives/edgar/data/1876042/000187604226000148/final_05x11q1epr30.htm)
-- [Banco de México：Remittances](https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA11&locale=es&sector=1)
+- [Circle：CPN](https://developers.circle.com/cpn)
+- [Circle：Supported countries](https://developers.circle.com/cpn/references/compliance/supported-countries)
+- [Circle：Supported payment routes](https://developers.circle.com/api-reference/cpn/cpn-platform/list-routes)
+- [Circle：Supported payment methods](https://developers.circle.com/cpn/references/payments/supported-payment-methods)
+- [Circle：India local-currency payout announcement](https://www.circle.com/blog/circle-payments-network-expands-local-currency-payout-corridors-across-asia-the-middle-east-europe-and-the-us)
+- [RBI：MTSS Master Direction](https://www.rbi.org.in/scripts/BS_ViewMasDirections.aspx?id=10868)
+- [SBP：Raast](https://www.sbp.org.pk/our-subsidiaries/raast/raast-person-to-person)
+- [Bangladesh Bank：Payment systems](https://www.bb.org.bd/en/index.php/financialsystems/paysystems)
+- [Bangladesh Bank：Virtual asset circular](https://www.bb.org.bd/mediaroom/circulars/fepd/sep152022fepd24e.pdf)
+- [BSP：PESONet participants](https://www.bsp.gov.ph/PaymentAndSettlement/PESONet%20Participants.pdf)
+- [BSP：InstaPay participants](https://www.bsp.gov.ph/PaymentAndSettlement/Instapay%20Participants.pdf)
 - [IRS：Remittance transfer tax](https://www.irs.gov/irb/2025-43_IRB)

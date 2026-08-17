@@ -9,43 +9,43 @@ export function ReportPage({ language, reportHtml, toc }: { language: Language; 
   const copy = zh ? {
     shortTitle: "跨境支付走廊研究",
     eyebrow: "UR Payments Research · 2023–2025",
-    title: "跨境支付走廊：流量与未满足需求",
-    intro: "六组走廊的规模、现有服务覆盖，以及 UR 可以验证的市场缺口。",
+    title: "跨境支付走廊：流量信号与服务缺口假设",
+    intro: "分清宏观流量能证明什么、企业机会仍缺什么，以及 UR 应如何用生产数据作出上线决定。",
     verified: "最后核验：2026 年 8 月 17 日",
-    unit: "正文金额单位：亿美元",
+    unit: "正文金额单位：USD billion（十亿美元）",
     toc: "目录",
-    charts: "关键统计图",
-    chartsIntro: "先用五张图理解数量级，再进入各走廊的证据和建议。",
+    charts: "关键证据图",
+    chartsIntro: "五张图分别说明数量级、统计口径和证据边界；图后的文字解释它支持什么，也解释它不能证明什么。",
     readReport: "阅读完整报告",
-    disclaimer: "本报告用于市场研究与试点设计参考。走廊数字混合了实际值、估算、预测和公开数据下限，不能直接作为收入预测，也不构成法律、监管或投资意见。文中的 UR 机会判断属于待验证假设，不代表任何市场或付款方式已经上线。",
+    disclaimer: "本报告用于市场研究与试点设计参考。走廊数字混合了实际值、暂定值、估算、预测和复合代理，不能直接作为企业付款市场规模或收入预测，也不构成法律、监管或投资意见。文中的 UR 机会判断属于待验证假设，不代表任何市场或付款方式已经上线。",
     skip: "跳到正文",
     source: "研究方法、限制与全部来源见报告末尾。",
   } : {
     shortTitle: "Cross-border corridor research",
     eyebrow: "UR Payments Research · 2023–2025",
-    title: "Cross-border payment corridors: flows and unmet needs",
-    intro: "The scale of six corridor groups, what current service providers cover, and the gaps UR can test.",
+    title: "Cross-border payment corridors: flow signals and service-gap hypotheses",
+    intro: "What macro flows can establish, what remains unproven about enterprise demand, and how UR should use production evidence to make launch decisions.",
     verified: "Last verified: 17 August 2026",
-    unit: "Report unit: USD 100 million unless stated otherwise",
+    unit: "Report flow unit: USD billion",
     toc: "Contents",
-    charts: "Key charts",
-    chartsIntro: "Use the five charts to establish scale before reading the evidence and recommendations for each corridor.",
+    charts: "Key evidence charts",
+    chartsIntro: "Each chart shows a scale or relationship and states both what the evidence supports and what it cannot establish.",
     readReport: "Read the full report",
-    disclaimer: "This report supports market research and pilot design. Corridor figures mix actuals, estimates, forecasts and public-data lower bounds. They should not be used directly as revenue forecasts and do not constitute legal, regulatory or investment advice. UR opportunity statements are hypotheses to test, not claims that a market or payment method is live.",
+    disclaimer: "This report supports market research and pilot design. Corridor figures mix actuals, provisional values, estimates, forecasts and composite proxies. They are not direct measures of B2B payment markets or revenue and do not constitute legal, regulatory or investment advice. UR opportunity statements are hypotheses to test, not claims that a market or payment method is live.",
     skip: "Skip to the report",
     source: "See the end of the report for methodology, limitations and full sources.",
   };
 
   const metrics = zh ? [
-    ["654 亿美元", "海湾重点走廊 · 2025 年度标签"],
-    ["至少 233 亿美元", "欧洲至亚洲公开数据下限 · 2025"],
-    ["1,737 亿美元", "拉美和加勒比收款 · 2025 估计"],
-    ["55 家", "CPN enrolled institutions · 2026-02-20"],
+    ["USD 64.7bn", "海湾至四国个人汇款代理，不是 B2B 规模"],
+    ["USD 23.3bn", "欧洲至亚洲复合代理，不是完整市场"],
+    ["2 个", "首批并行验证假设，不是上线决定"],
+    ["5 项", "从宏观流量到 UR 盈利仍需完成的验证"],
   ] : [
-    ["USD 65.4bn", "Priority Gulf corridors · 2025 label"],
-    ["≥ USD 23.3bn", "Europe-to-Asia public-data lower bound · 2025"],
-    ["USD 173.7bn", "Latin America and Caribbean inflows · 2025 estimate"],
-    ["55", "CPN enrolled institutions · 20 Feb 2026"],
+    ["USD 64.7bn", "Gulf-to-four-market remittance proxy, not B2B volume"],
+    ["USD 23.3bn", "Europe-to-Asia composite proxy, not a full market"],
+    ["2", "First-wave hypotheses to test, not launch decisions"],
+    ["5", "Validations still required between macro flow and UR profit"],
   ];
 
   return (
@@ -89,7 +89,7 @@ export function ReportPage({ language, reportHtml, toc }: { language: Language; 
 
           <div className="report-column">
             <section id="charts" className="charts-section">
-              <div className="section-intro"><p className="eyebrow">Data view</p><h2>{copy.charts}</h2><p>{copy.chartsIntro}</p></div>
+              <div className="section-intro"><p className="eyebrow">{zh ? "证据视图" : "Evidence view"}</p><h2>{copy.charts}</h2><p>{copy.chartsIntro}</p></div>
               <Charts lang={language} />
             </section>
 
